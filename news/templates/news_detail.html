@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ news.title }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ news.title }}</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>{{ news.content }}</p>
+        <p><strong>Опубликовано:</strong> {{ news.published_at }}</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025, Все права защищены.</p>
+    </footer>
+</body>
+</html>

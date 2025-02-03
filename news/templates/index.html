@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+</head>
+<body>
+    <header>
+        <h1>Новости</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul>
+            {% for item in news %}
+                <li>
+                    <a href="{% url 'news_detail' pk=item.pk %}">{{ item.title }}</a>
+                    <p>{{ item.published_at }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025, Все права защищены.</p>
+    </footer>
+</body>
+</html>
